@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .col-md-8 > .card-body {
+      height: 100%;
+      display: flex!important;
+      flex-direction: column!important;
+      justify-content: space-between!important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  .col-md-8 > .card-body {
+      height: 100%;
+      display: flex!important;
+      flex-direction: column!important;
+      justify-content: space-between!important;
+  }
+
+  .col-md-8 > .card-body .btn {
+      width: fit-content!important;
+  }
+
+  .marginTop {
+    margin-top: 10vh;
+  }
+  
+  
+}
