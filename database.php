@@ -4,6 +4,7 @@ $server = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'apicursosapplication';
+$url = '';
 
 try {
   $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);

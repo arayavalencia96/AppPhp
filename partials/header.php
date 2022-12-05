@@ -64,7 +64,7 @@
                 <a class="nav-link" href="add-course.php">Crear Curso</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/coursesListOwn.php">Ver mis Cursos</a>
+                <a class="nav-link" href="../coursesListOwn.php">Ver mis Cursos</a>
               </li>
               <?php else: ?>
                 <li class="nav-item">

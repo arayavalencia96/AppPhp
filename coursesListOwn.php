@@ -10,10 +10,9 @@ $queryCourse = "SELECT * FROM cursos WHERE id_creador = $idCurrentUser";
 $resultCourse = mysqli_query($conexion, $queryCourse);
 $getDataCourse = mysqli_fetch_assoc($resultCourse);
 $queryImage = "SELECT * FROM imagenes
-WHERE id_curso = {$getDataCourse['id']}";
+WHERE id_curso = ".$getDataCourse['id']."";
 $resultImage = mysqli_query($conexion, $queryImage);
 
-echo $getDataCourse['id_curso'];
 
 ?>
 
@@ -33,14 +32,13 @@ echo $getDataCourse['id_curso'];
   <div class="p-4 marginTop">
     <div class="row row-cols-2 pt-2">
       <?php
-while ($rowCourse = mysqli_fetch_assoc($resultCourse) and $rowImage=mysqli_fetch_assoc($resultImage)) {
+while ($rowCourse = mysqli_fetch_assoc($resultCourse)) {
     ?>
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4">
           <div class="card h-100 mb-3 tamano-card-seccion-principal">
             <div class="row g-0 h-100">
               <div class="col-md-3 d-flex">
-              <img alt="ImageCourse" class="card-img-top light-pink-headline"
-                src="data:image/jpg;base64, <?php echo base64_encode($rowImage['imagen']); ?>">
+              
               </div>
               <div class="col-md-9">
                 <div class="card-body">

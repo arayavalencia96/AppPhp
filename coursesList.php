@@ -26,13 +26,14 @@ $resultIdCourses = mysqli_query($conexion, $queryIdCourses);
 while ($rowCourse = mysqli_fetch_assoc($resultIdCourses) and $rowImage = mysqli_fetch_assoc($resultImage)) {
     ?>
         <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-4">
-          <div class="card h-100 mb-3 tamano-card-seccion-principal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3 d-flex">
-              <img alt="ImageCourse" class="card-img-top light-pink-headline"
+          <div class="d-flex card h-100 mb-3">
+            <div class="row g-0 h-100 justify-content-center">
+              <div class="col-md-3 d-flex mt-2">
+              <img alt="ImageCourse" class="card-img-top light-pink-headline" width="100%" height="100%"
                 src="data:image/jpg;base64, <?php echo base64_encode($rowImage['imagen']); ?>">
               </div>
               </div>
+              <div class="d-flex justify-content-center">
               <div class="col-md-9">
                 <div class="card-body">
                 <div class="d-flex justify-content-center">
@@ -59,6 +60,7 @@ while ($rowCourse = mysqli_fetch_assoc($resultIdCourses) and $rowImage = mysqli_
                     <a class="btn btn-sm text-nowrap btn-primary">Ver Curso</a>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>

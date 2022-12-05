@@ -3,4 +3,5 @@
     $server = 'localhost';
     $password = "";
     $username = 'root';
+    $url = '';
 ?>
