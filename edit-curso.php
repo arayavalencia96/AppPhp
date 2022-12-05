@@ -48,7 +48,7 @@ function submit($id, $message)
         $stmt->bindParam(':updated_at', $_POST['updated_at']);
 
         include_once 'datosBaseDatos.php';
-        $conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+        $conexion = mysqli_connect($server, $username, $password, $database);
         $imagenEnBynary = mysqli_escape_string($conexion, $imagenEnBynary);
 
         $query = "UPDATE imagenes SET nombre='$nombreImagen',

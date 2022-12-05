@@ -5,7 +5,7 @@ if (isset($_SESSION['user_id'])) {
     $idCurrentUser = $_SESSION['user_id'];
 }
 
-$conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+$conexion = mysqli_connect($server, $username, $password, $database);
 $queryCourse = "SELECT * FROM cursos WHERE id_creador = $idCurrentUser";
 $resultCourse = mysqli_query($conexion, $queryCourse);
 $getDataCourse = mysqli_fetch_assoc($resultCourse);

@@ -39,7 +39,7 @@ if (isset($_POST)) {
             $lastId = $getLastId->fetch(PDO::FETCH_ASSOC)['id'];
 
             include_once 'datosBaseDatos.php';
-            $conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+            $conexion = mysqli_connect($server, $username, $password, $database);
             $imagenEnBynary = mysqli_escape_string($conexion, $imagenEnBynary);
 
             $query = "INSERT INTO `apicursosapplication`.`imagenes` (`nombre`, `tipo`, `imagen`, `id_curso`)

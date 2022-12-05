@@ -14,7 +14,7 @@ $sql = "DELETE FROM cursos WHERE id=$id";
 $stmt = $conn->prepare($sql);
 
 include_once '../datosBaseDatos.php';
-$conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+$conexion = mysqli_connect($server, $username, $password, $database);
 $query = "DELETE FROM imagenes WHERE id_curso=$id";
 
 if ($stmt->execute() and mysqli_query($conexion, $query)) {

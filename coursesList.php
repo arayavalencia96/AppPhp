@@ -1,7 +1,7 @@
 <?php
 include_once "datosBaseDatos.php";
 
-$conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+$conexion = mysqli_connect($server, $username, $password, $database);
 $queryImage = "SELECT `nombre`, `tipo`, `imagen` FROM `apicursosapplication`.`imagenes`";
 $queryIdCourses = "SELECT `titulo`, `descripcion`, `instructor`, `precio` FROM `apicursosapplication`.`cursos`";
 $resultImage = mysqli_query($conexion, $queryImage);
